@@ -139,9 +139,11 @@ if (num > 0) {
 
 let numbers = [];
 
-for (numbers = 0; numbers < 100; numbers++) {
-  console.log(numbers);
+for (let i = 0; i < 100; i++) {
+  numbers.push(i);
 }
+
+console.log(numbers);
 
 //Q5 for × if
 
@@ -150,10 +152,8 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 for (let i = 0; i < mixed.length; i++) {
   let element = mixed[i];
 
-  if (typeof element === 'number' && element % 2 === 0) {
-    console.log('even');
-  } else if (typeof element === 'number' && element % 2 === 1) {
-    console.log('odd');
+  if (typeof element === 'number') {
+    element % 2 === 0 ? console.log('even') : console.log('odd');
   } else {
     console.log('not number');
   }
